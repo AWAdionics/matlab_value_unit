@@ -1,0 +1,4 @@
+*.asv
+scratch*
+data/*
+*.html
