@@ -28,5 +28,13 @@ classdef test_make < matlab.unittest.TestCase
             testCase.verifyEqual(pow,pow_truth)
             testCase.verifyEqual(pre,pre_truth)
         end
+
+        function test_write_unit(testCase)
+            truth = ' mol^2/kg';
+            a_unit = make_unit(' mol^2/kg');
+
+            trial = write_unit(a_unit);
+            testCase.verifyEqual(trial,truth)
+        end
     end
 end
