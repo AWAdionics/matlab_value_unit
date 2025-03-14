@@ -1,5 +1,8 @@
 function unit_char = write_unit(unit_arrays)
-    
+    if all(unit_arrays.power(:) == 0)
+        unit_char = '';
+        return
+    end
     power_struct = power_array_struct(unit_arrays.power);
     prefix_struct = prefix_array_struct(unit_arrays.prefix);
 

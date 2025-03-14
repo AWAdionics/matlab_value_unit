@@ -1,8 +1,5 @@
 classdef constants_mavu
     properties (Constant)
-        unitcheck=false%ONLY SET TO true ONCE PROGRAM CONFIRMED !
-
-
         %MUST BE ORDERED FROM BIGGEST TO SMALLEST!
         accepted_units = {'L_brine','g_eau','mol','g','L','K','m','J','C','s'}
 

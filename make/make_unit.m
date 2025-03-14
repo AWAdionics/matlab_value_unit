@@ -10,7 +10,6 @@ function unit_struct = make_unit(input_char)
 %   see also name_prefixunit (used)
 %   char_quick_split (used)
 
-
 function [unit_char,prefix_power_struct,char_id] = unitpower_to_unit_power(unit_power_char,positive)
     %unitpower_to_unit_power turns a unit with power char into a unit and prefix-power struct
     %
@@ -64,6 +63,9 @@ end
 
 unit_struct = struct('prefix',ones(length(constants_mavu.accepted_units),1), ...
                      'power',zeros(length(constants_mavu.accepted_units),1));
+if strcmp(input_char,'')
+    return
+end
 
 %splits positive and negative
 unit_char_split = char_quick_split(input_char,'/');
